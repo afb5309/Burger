@@ -63,16 +63,19 @@
 
 .type{
     background-color: rgba(0, 0, 0, 0);
-    border: none;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    
+    border: 3px dotted rgb(199, 71, 71);
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 5px;
 }
 
 ::placeholder { 
     color: rgb(235, 235, 235);
     opacity: 1; 
     text-align:center;
+    margin-left: 10px;
   }
+
 
   .miniHead{
        background-color: rgba(0, 0, 0, 0.657);

@@ -5,10 +5,7 @@ var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
     burger.selectAll(function(data) {
-        var obj = {
-            burgers: data
-        };
-        res.render("index", obj);
+        res.render("index", {burgers: data});
     });
 });
 
