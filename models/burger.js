@@ -15,7 +15,12 @@ var burger = {
         orm.updateOne("burgers", "devoured", 1, "id", condition, function(res) {
             cb(res);
         });
-    }
+    },
+    delete: function(condition, cb) {
+        orm.delete("burgers", condition, function(res) {
+          cb(res);
+        });
+      }
 };
 
 module.exports = burger;
