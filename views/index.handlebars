@@ -1,0 +1,35 @@
+<div class="row mx-auto d-flex justify-content-center">
+  <div class="col-sm-12 eat boxes m-3">
+    <div>
+      <h4>Burgers to Eat</h4>
+      <hr>
+    </div>
+    <ul>
+        {{!-- insert new burgers using handlebars each statement --}}
+      {{#each burgers}} 
+      {{#unless devoured}} 
+      {{!-- use handlebars partials to check burger devoured status = false --}}
+      {{!-- https://handlebarsjs.com/partials.html --}}
+      {{> burger devoured=false}} 
+      {{/unless}} 
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm-12 eaten boxes m-3">
+    <div>
+      <h4>Eaten Burgers</h4>
+      <hr>
+    </div>
+    <div><ul>
+        {{!-- identify devoured burgers needing to move from left side -> right --}}
+      {{#each burgers}} 
+      {{#if devoured}} 
+      {{!-- use handlebars partials to check burger devoured status = true --}}
+      {{!-- https://handlebarsjs.com/partials.html --}}
+      {{> burger devoured=true}} 
+      {{/if}} 
+      {{/each}}
+    </ul>
+    </div>
+  </div>
+</div>
